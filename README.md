@@ -1,4 +1,4 @@
-# Desafio Node 1
+# Desafio ReactJS 2
 
 Segundo Desafio de ReactJS no curso GoStack.
 
