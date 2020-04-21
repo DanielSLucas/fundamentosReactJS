@@ -30,7 +30,7 @@ interface Balance {
 }
 
 interface Response {
-  transactions: Transaction;
+  transactions: Transaction[];
   balance: Balance;
 }
 
@@ -42,14 +42,12 @@ const Dashboard: React.FC = () => {
     async function loadTransactions(): Promise<void> {
       const response = await api.get<Response>('transactions');
 
-      console.log(response.data);
-
       const {
         transactions: newTransactions,
         balance: newBalance,
       } = response.data;
 
-      setTransactions([...transactions, newTransactions]);
+      setTransactions(newTransactions);
       setBalance(newBalance);
     }
     loadTransactions();
@@ -97,14 +95,31 @@ const Dashboard: React.FC = () => {
             </thead>
 
             <tbody>
-              {transactions.map(transaction => (
-                <tr key={transaction.id}>
-                  <td className="title">{transaction.title}</td>
-                  <td className="income">{formatValue(transaction.value)}</td>
-                  <td>{transaction.category}</td>
-                  <td>{transaction.created_at}</td>
-                </tr>
-              ))}
+              {transactions.map(transaction => {
+                let classe = '';
+                let sinal = '';
+
+                if (transaction.type === 'income') {
+                  classe = 'income';
+                  sinal = '';
+                } else if (transaction.type === 'outcome') {
+                  classe = 'outcome';
+                  sinal = '- ';
+                }
+
+                const data = new Date(transaction.created_at);
+                const parsed = new Intl.DateTimeFormat('pt-BR').format(data);
+                return (
+                  <tr key={transaction.id}>
+                    <td className="title">{transaction.title}</td>
+                    <td className={classe}>
+                      {sinal + formatValue(transaction.value)}
+                    </td>
+                    <td>{transaction.category.title}</td>
+                    <td>{parsed}</td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </TableContainer>
