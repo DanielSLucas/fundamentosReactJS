@@ -37,6 +37,7 @@ Essa será uma aplicação que irá se conectar ao seu backend do desafio Fundam
 -   [x] **`should be able to upload a file`**: Para que esse teste passe, você deve permitir que um arquivo seja enviado através do componente de drag-n-drop na página de `import`, e que seja possível exibir o nome do arquivo enviado para o input.
 
 **Dica**: Deixamos disponível um componente chamado `FileList` na pasta `components` para ajudar você a listar os arquivos que enviar pelo componente de `Upload`, ele deve exibir o título do arquivo e o tamanho dele.
+
 ---
 
 *Este repositório teve como base um template disponibilizado pela equipe da rocketSeat.
