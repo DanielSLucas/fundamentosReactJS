@@ -23,7 +23,7 @@ entradas - saídas.
 
 Nesta tela podemos importar transações a partir de um arquivo csv para o banco da aplicação.
 
---
+---
 
 *A aplicação pode ser executada em ambiente de desenvolvimento executando: `yarn start`
 **As informações de transações não serão exibidas se a aplicação não estiver conectada ao back-end, e este conectado a
