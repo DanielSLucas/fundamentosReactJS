@@ -1,3 +1,34 @@
+# Descrição
+
+Esta é uma aplicação desenvolvida durante o curso GoStack da RocketSeat, e se trata do segundo desafio de ReactJS até o
+momento.
+
+Está é uma aplicação feita com typescript + ReactJS, além de estar conectada com uma api node escrita com typescript e
+conectada a um banco postgress rodando em um docker.
+
+A aplicação possui duas telas, e a navegação entre elas pode ser feita através de um menu no cabeçalho da página
+
+-   ## Tela 1: Transações & Balanço
+<img src="./screenshots/transactionNBalance.jpg">
+
+Nesta tela estão listadas todas as transações disponíveis no banco.
+
+Traz as informações de titulo, preço, categoria e data na qual esta transação aconteceu.
+
+Além disso traz um balanço geral destas transações, infomando o total em entradas, saídas e o valor final,
+entradas - saídas.
+
+-   ## Tela 2: Importar transações
+<img src="./screenshots/importTransactions.jpg">
+
+Nesta tela podemos importar transações a partir de um arquivo csv para o banco da aplicação.
+
+--
+
+*A aplicação pode ser executada em ambiente de desenvolvimento executando: `yarn start`
+**As informações de transações não serão exibidas se a aplicação não estiver conectada ao back-end, e este conectado a
+um banco de dados.
+
 # Desafio ReactJS 2
 
 Segundo Desafio de ReactJS no curso GoStack.
