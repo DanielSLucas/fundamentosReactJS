@@ -9,7 +9,7 @@ conectada a um banco postgress rodando em um docker.
 A aplicação possui duas telas, e a navegação entre elas pode ser feita através de um menu no cabeçalho da página
 
 -   ## Tela 1: Transações & Balanço
-<img src="./screenshots/transactionNBalance.jpg">
+<img src="./screenshots/transactionsNBalance.jpg">
 
 Nesta tela estão listadas todas as transações disponíveis no banco.
 
